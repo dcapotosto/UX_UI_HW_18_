@@ -33,7 +33,6 @@
     padding: auto;
 }
 
-
 body {
     margin: 0;
   }
@@ -52,40 +51,6 @@ body {
     font-style: bold;
     color: #182FAA;
   }
-  header {
-    background-color: #E7E9F0;
-    padding: 15px;
-  }
-  header ul {
-    float: right;
-    color: #182FAA;
-  }
-  header li {
-    display: inline-block;
-    padding: 0px 5px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-  }
-  header p {
-    display: inline-block;
-  }
-  header img {
-    width: 100px;
-  }
-  .heroImg {
-    background-color: #E7E9F0;
-    padding: 100px 15px;
-  }
-  .content {
-    max-width: 300px;
-    margin: 0 auto;
-    padding: 50px;
-    background-color: #E7E9F0;
-    text-align: center;
-  }
-  .content img {
-    width: 150px;
-  }
   button {
     padding: 15px;
     background-color: #E7E9F0;
@@ -94,27 +59,7 @@ body {
     border-radius: 4px;
     font-family: Helvetica, sans-serif;
   }
-  footer {
-    background-color: #373738;
-    padding: 5px;
-    color: white;
-  }
-  footer ul {
-    list-style: none;
-    padding-left: 5px;
-  }
-  footer li {
-    display: inline-block;
-    padding: 0px 7px;
-  }
-  .heading {
-    text-align: center;
-    padding: 15px 5px;
-    font-size: 30px;
-    font-family: Helvetica, sans-serif;
-    font-style: condensed;
-    color: #182FAA;
-  }
+
 /* My UX Skills Section using CSS flex*/
 .flexContainer {
     display: flex;
@@ -166,4 +111,31 @@ body {
   }
   .content3 {
     grid-area: content3;
+  }
+  /* My Mobile Media Query */
+  @media only screen and (max-width: 600){
+    .flexContainer {
+        display: column;
+        width: 100%;
+    }
+    #categoryGrid {
+        margin: 0px 5%;
+        display: grid;
+        grid-template-rows: 300px 300px 300px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "one two three"
+        "four five six"
+        "seven eight nine";
+    }
+    #categoryGrid {
+        grid-template-rows: 300px 300px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"
+        "five";
+    }
   }
