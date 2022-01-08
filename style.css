@@ -1,0 +1,114 @@
+#navigation {
+    display: inline;
+    vertical-align: top;
+}
+#logo {
+    width: 23%;
+    padding: 1%;
+    text-align: center;
+}
+.nav {
+    width: 73%;
+    padding: 1%;
+}
+#ul {
+    width: 50%;
+    margin-left: auto;
+}
+#heroImg {
+    height: 600px;
+    padding: 25px;
+}
+#content {
+    width: 500px;
+    margin: 0 auto;
+}
+#footer {
+    background-color: #373738;
+    padding: auto;
+}
+#footer ul {
+    display: inline-block;
+    vertical-align: top;
+    padding: auto;
+}
+
+/* My UX Skills Section using CSS flex*/
+.flexContainer {
+    display: flex;
+    padding: 60px 30px;
+  }
+  .flexContainer div {
+    width: 33%;
+    padding: 25px;
+  }
+/* My Work Section using CSS Grid */
+.myWork {
+    padding: 60px 30px;
+    padding-top: 0;
+    background-color: #EBEBEB;
+  }
+  .workGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 350px 350px 350px;
+    grid-template-areas:
+    "img1 content1"
+    "img2 content2"
+    "img3 content3"
+    ;
+  }
+  .workGrid img {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+  .img1 {
+    grid-area: img1;
+  }
+  .img2 {
+    grid-area: img2;
+  }
+  .img3 {
+    grid-area: img3;
+  }
+  .img1, .img2, .img3, .content1, .content2, .content3 {
+    padding: 80px;
+  }
+  .content1 {
+    grid-area: content1;
+  }
+  .content2 {
+    grid-area: content2;
+  }
+  .content3 {
+    grid-area: content3;
+  }
+  /* My Mobile Media Query */
+  @media only screen and (max-width: 600){
+    .flexContainer {
+        display: column;
+        width: 100%;
+    }
+    #categoryGrid {
+        margin: 0px 5%;
+        display: grid;
+        grid-template-rows: 300px 300px 300px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "one two three"
+        "four five six"
+        "seven eight nine";
+    }
+    #categoryGrid {
+        grid-template-rows: 300px 300px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"
+        "five";
+    }
+  }
